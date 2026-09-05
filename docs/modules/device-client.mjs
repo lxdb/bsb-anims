@@ -122,7 +122,8 @@ export class DeviceClient {
     );
     let response;
     try {
-      response = await this.#fetch(`${this.#origin}${path}`, {
+      const fetchImpl = this.#fetch;
+      response = await fetchImpl(`${this.#origin}${path}`, {
         ...options,
         headers: {
           ...(options.headers ?? {}),

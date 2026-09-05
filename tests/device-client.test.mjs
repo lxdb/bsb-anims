@@ -49,6 +49,20 @@ test("every device request carries LNA intent and the in-memory token", async ()
   assert.equal(client.hasCredentials, true);
 });
 
+test("fetch is called without a DeviceClient receiver, as browser fetch requires", async () => {
+  const client = new DeviceClient({
+    origin: "http://10.0.4.20",
+    token: TOKEN,
+    fetchImpl: async function () {
+      if (this !== undefined) {
+        throw new TypeError("Illegal invocation");
+      }
+      return Response.json({ api_semver: "27.5.0" });
+    },
+  });
+  assert.deepEqual(await client.connect(), { api_semver: "27.5.0" });
+});
+
 test("authorization failure clears credentials", async () => {
   const client = new DeviceClient({
     origin: "http://10.0.4.20",
