@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "application_name": "custom_themes",
+  "animations": [
+    {
+      "id": "available",
+      "name": "Available",
+      "description": "Let others know you're available.",
+      "catalog_order": 10,
+      "theme_order": 150,
+      "width": 72,
+      "height": 16,
+      "fps": 60,
+      "files": {
+        "animation": {
+          "path": "animations/available/animation.anim",
+          "bytes": 207657,
+          "sha256": "525e8afed45f5fe34a7a14977ddb503617b9987ea7efde50b990fb761b7af175"
+        },
+        "theme": {
+          "path": "animations/available/theme.json",
+          "bytes": 96,
+          "sha256": "4c22286d559a2c18c3481af157a05366a86887f923da5678c21120229b990fc7"
+        },
+        "framebuffer_preview": {
+          "path": "animations/available/framebuffer.gif",
+          "bytes": 73913,
+          "sha256": "15af1da8befca484d53731b31f183a1592b2d1cb82792fd7001fa83bb27943f1"
+        },
+        "device_preview": {
+          "path": "animations/available/preview.gif",
+          "bytes": 72915,
+          "sha256": "d46948620035e1636b41ddaec89a650c69dafffb30966d20de8ff4b36d7155fa"
+        }
+      }
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "description": "Signal deep work mode. Do not disturb.",
+      "catalog_order": 20,
+      "theme_order": 130,
+      "width": 72,
+      "height": 16,
+      "fps": 60,
+      "files": {
+        "animation": {
+          "path": "animations/focus/animation.anim",
+          "bytes": 1041517,
+          "sha256": "123a5a46ad2add659f3b5c1ab50d8ca9a1435c1a4e724ef83c2c32887e2735ed"
+        },
+        "theme": {
+          "path": "animations/focus/theme.json",
+          "bytes": 92,
+          "sha256": "209dec3084b92aa389eb8a44eaecd86a1302a662ba1dbe85ddc28395323ff304"
+        },
+        "framebuffer_preview": {
+          "path": "animations/focus/framebuffer.gif",
+          "bytes": 523631,
+          "sha256": "80e366db95f5de5b25fed7c104c2bad2e89e4a4402e6471a15822f33d115c180"
+        },
+        "device_preview": {
+          "path": "animations/focus/preview.gif",
+          "bytes": 810508,
+          "sha256": "3d2bc500cb5577a4ea42437fba8b04a90726949200f05d368e89d47fba73b452"
+        }
+      }
+    },
+    {
+      "id": "starbucks",
+      "name": "Starbucks",
+      "description": "Fueling productivity, one cup at a time.",
+      "catalog_order": 30,
+      "theme_order": 140,
+      "width": 72,
+      "height": 16,
+      "fps": 60,
+      "files": {
+        "animation": {
+          "path": "animations/starbucks/animation.anim",
+          "bytes": 276857,
+          "sha256": "74fd4032c9bee106175eeff7d25126038645befd629737e217176046f25297fb"
+        },
+        "theme": {
+          "path": "animations/starbucks/theme.json",
+          "bytes": 96,
+          "sha256": "2dd6c6ed0e1d38a6a8fc972e638556883fbdb1296fb453e26af30f9e6eede20b"
+        },
+        "framebuffer_preview": {
+          "path": "animations/starbucks/framebuffer.gif",
+          "bytes": 26714,
+          "sha256": "4355a996828f3f6cee5255e44c5f9b9648cac6414574a7fe2e4af2065e8f568b"
+        },
+        "device_preview": {
+          "path": "animations/starbucks/preview.gif",
+          "bytes": 418712,
+          "sha256": "ffde8a5a38ff3e153ae813ca03d131680aa14007083a8d427cd5352f239752c7"
+        }
+      }
+    },
+    {
+      "id": "review",
+      "name": "Review",
+      "description": "In review. Feedback appreciated.",
+      "catalog_order": 40,
+      "theme_order": 160,
+      "width": 72,
+      "height": 16,
+      "fps": 60,
+      "files": {
+        "animation": {
+          "path": "animations/review/animation.anim",
+          "bytes": 351540,
+          "sha256": "b2f6dfc6c9ff6816ee381ae3cb28b6623ded6e0c631203daa370ce364c034221"
+        },
+        "theme": {
+          "path": "animations/review/theme.json",
+          "bytes": 93,
+          "sha256": "0d41d7105d28b8d3e42a60b049a96da1c14aab454c99bf07543d8c1210c1510c"
+        },
+        "framebuffer_preview": {
+          "path": "animations/review/framebuffer.gif",
+          "bytes": 238874,
+          "sha256": "aa1d59056e0127ea9d3f4fd1be8e6c40a090afc16d0bab94d83297b5cf49b6bf"
+        },
+        "device_preview": {
+          "path": "animations/review/preview.gif",
+          "bytes": 60773,
+          "sha256": "61c0aa375315c131bb4ac33d8e20a989960da4e4bbab0733d19be7eb9e868f9d"
+        }
+      }
+    },
+    {
+      "id": "deploy",
+      "name": "Deploy",
+      "description": "Shipping awesome things.",
+      "catalog_order": 50,
+      "theme_order": 170,
+      "width": 72,
+      "height": 16,
+      "fps": 60,
+      "files": {
+        "animation": {
+          "path": "animations/deploy/animation.anim",
+          "bytes": 204197,
+          "sha256": "694386645bedcdb909116c33c5b4629ac39e26989c6795f1f0d673bdf68b06f2"
+        },
+        "theme": {
+          "path": "animations/deploy/theme.json",
+          "bytes": 93,
+          "sha256": "259192206ffe0c08eb4803a14c7df39b22fdb06f97ce08901d31320d9d67c296"
+        },
+        "framebuffer_preview": {
+          "path": "animations/deploy/framebuffer.gif",
+          "bytes": 251931,
+          "sha256": "285e7e23626dd9cbd4e67d82385e3cc7bf7517650ac1cd6afd70c4bbcc1b7753"
+        },
+        "device_preview": {
+          "path": "animations/deploy/preview.gif",
+          "bytes": 39902,
+          "sha256": "dfbcc52c5b40091e126fa2e588503d74f16d3a92de206ec0ae01047e1f5f3a9a"
+        }
+      }
+    },
+    {
+      "id": "debug",
+      "name": "Debug",
+      "description": "Finding bugs. Please stand by.",
+      "catalog_order": 60,
+      "theme_order": 180,
+      "width": 72,
+      "height": 16,
+      "fps": 60,
+      "files": {
+        "animation": {
+          "path": "animations/debug/animation.anim",
+          "bytes": 110777,
+          "sha256": "8fadf20f34fa974a7fc868a67af71a18a260b660e2f545350b6c98061ebca5af"
+        },
+        "theme": {
+          "path": "animations/debug/theme.json",
+          "bytes": 92,
+          "sha256": "2ba0c1bdd0ec94541d6e22b633b101242be6267bf3a19e1bef70760b15d52061"
+        },
+        "framebuffer_preview": {
+          "path": "animations/debug/framebuffer.gif",
+          "bytes": 232902,
+          "sha256": "b699da90b02a8968e5f8bb6e95a2275e5f8cdc498c8dc3d693107ba36ff07e66"
+        },
+        "device_preview": {
+          "path": "animations/debug/preview.gif",
+          "bytes": 23122,
+          "sha256": "67f0983ee7e3e389dc25f648e1515fcd5a4a1ee3179cb5fff95b096c3cdb4a2e"
+        }
+      }
+    }
+  ]
+}
