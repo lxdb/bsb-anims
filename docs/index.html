@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Browse, download, and install curated 72x16 BUSY Bar animations."
+    >
+    <title>Animations for BUSY Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">Skip to animation catalog</a>
+    <header class="site-header">
+      <nav class="navigation" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="BUSY Animations home">
+          <span class="busy-mark">
+            <svg aria-hidden="true" viewBox="0 0 12 14" width="12" height="14">
+              <path d="M1 1.2v11.6L11 7 1 1.2Z" fill="currentColor"></path>
+            </svg>
+            BUSY
+          </span>
+          <span class="brand-product">Animations</span>
+        </a>
+        <div class="nav-links">
+          <a class="active" href="#catalog">Catalog</a>
+          <a href="#about">About</a>
+        </div>
+        <button id="connect-button" class="connect-button" type="button">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19">
+            <path
+              d="m9.6 14.4 4.8-4.8m-7.2 7.2-1.4 1.4a3.4 3.4 0 0 1-4.8-4.8L5.4 9a3.4 3.4 0 0 1 4.8 0m6.6-1.8 1.4-1.4a3.4 3.4 0 1 1 4.8 4.8L18.6 15a3.4 3.4 0 0 1-4.8 0"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+            ></path>
+          </svg>
+          <span id="connect-button-label">Connect BUSY Bar</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <h1 id="page-title">Animations for BUSY Bar</h1>
+        <p>Browse and install animations directly to your BUSY Bar over the local network.</p>
+      </section>
+
+      <p id="notice" class="notice" role="status" hidden></p>
+      <p id="catalog-error" class="catalog-error" role="alert" hidden></p>
+
+      <section id="catalog" aria-labelledby="catalog-title" tabindex="-1">
+        <h2 id="catalog-title" class="visually-hidden">Animation catalog</h2>
+        <div id="catalog-grid" class="catalog-grid"></div>
+      </section>
+
+      <aside id="unsupported-browser" class="browser-note" hidden>
+        <span class="browser-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle>
+            <path d="M12 8h9M8.5 10 4 18m6-2 4.5 7" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </span>
+        Direct installation requires desktop Chrome or Edge. Downloads remain available.
+      </aside>
+
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div>
+          <h2 id="about-title">Small files, verified installs</h2>
+        </div>
+        <p>
+          Every download is a native 72x16, 60 FPS BUSY Bar animation. The installer
+          verifies catalog hashes before writing and verifies both device files after
+          writing. It does not delete files, reboot the device, or retain credentials.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>MIT except where noted.</span>
+      <a href="https://github.com/lxdb/bsb-anims">Source and license notices</a>
+    </footer>
+
+    <dialog
+      id="connection-dialog"
+      class="connection-dialog"
+      aria-labelledby="connection-dialog-title"
+    >
+      <div class="dialog-heading">
+        <div>
+          <h2 id="connection-dialog-title">Connect BUSY Bar</h2>
+        </div>
+        <button id="close-dialog" class="icon-button" type="button" aria-label="Close">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+            <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+          </svg>
+        </button>
+      </div>
+
+      <form id="connect-form">
+        <label for="device-url">Device URL</label>
+        <input
+          id="device-url"
+          name="device-url"
+          type="url"
+          value="http://10.0.4.20"
+          inputmode="url"
+          autocomplete="off"
+          required
+        >
+
+        <label for="api-token">API access key or token</label>
+        <p id="api-credential-hint" class="form-hint">
+          Enter the 4-10 digit access key or a 32-character access token.
+        </p>
+        <input
+          id="api-token"
+          name="api-token"
+          type="password"
+          minlength="4"
+          maxlength="32"
+          pattern="(?:[0-9]{4,10}|.{32})"
+          aria-describedby="api-credential-hint"
+          autocomplete="off"
+          spellcheck="false"
+          required
+        >
+
+        <p id="connection-error" class="form-error" role="alert" hidden></p>
+        <button class="primary-action connect-submit" type="submit">Connect</button>
+      </form>
+
+      <p id="connection-status" class="connection-status"></p>
+      <button id="disconnect-button" class="secondary-action" type="button" hidden>
+        Disconnect and clear credentials
+      </button>
+    </dialog>
+  </body>
+</html>

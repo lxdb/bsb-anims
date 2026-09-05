@@ -1,0 +1,24 @@
+name: Site checks
+
+on:
+  push:
+    branches: [site]
+  pull_request:
+    branches: [site]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: node --test tests/*.test.mjs
+      - run: node --check docs/app.mjs
+      - run: node --check docs/modules/catalog.mjs
+      - run: node --check docs/modules/device-client.mjs
+      - run: node --check docs/modules/installer.mjs
